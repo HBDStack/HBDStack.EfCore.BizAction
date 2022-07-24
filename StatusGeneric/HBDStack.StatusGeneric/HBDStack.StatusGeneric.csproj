@@ -22,8 +22,8 @@
     <Description>A support library to provide a common status handling for my projects.</Description>
     <Copyright>Copyright (c) 2022 drunkcoding</Copyright>
     <PackageLicenseUrl>MIT</PackageLicenseUrl>
-    <PackageProjectUrl>https://github.com/baoduy/HBD.EfCore.BizAction</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/baoduy/HBD.EfCore.BizAction</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/HBDStack/HBDStack.EfCore.BizAction</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/HBDStack/HBDStack.EfCore.BizAction</RepositoryUrl>
     <RepositoryType>GitHub</RepositoryType>
     <PackageTags>EfCore.GenericServices</PackageTags>
     <PackageReleaseNotes>

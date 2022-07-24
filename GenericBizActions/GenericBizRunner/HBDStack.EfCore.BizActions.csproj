@@ -22,8 +22,8 @@
     <Authors>Duy Hoang</Authors>
     <Description>Library to run business logic when using Entity Framework Core for database accesses, support status error code</Description>
     <Copyright>Copyright (c) 2021 Drunkcoding</Copyright>
-    <PackageProjectUrl>https://github.com/baoduy/HBD.EfCore.BizAction</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/baoduy/HBD.EfCore.BizAction</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/HBDStack/HBDStack.EfCore.BizAction</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/HBDStack/HBDStack.EfCore.BizAction</RepositoryUrl>
     <PackageTags>Entity Framework Core, Business Logic, ServiceLayer</PackageTags>
     <PackageIconUrl></PackageIconUrl>
     <Product>HBDStack.EfCore.BizActions</Product>
