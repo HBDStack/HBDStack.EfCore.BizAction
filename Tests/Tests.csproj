@@ -29,17 +29,7 @@
     <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="11.0.0" />
   </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\..\HBDStack.EfCore.BizActions.Abstraction\HBDStack.EfCore.BizActions.Abstraction.csproj" />
-    <ProjectReference Include="..\..\HBDStack.EfCore.BizActions.DefaultValidation\HBDStack.EfCore.BizActions.DefaultValidation.csproj" />
-    <ProjectReference Include="..\..\HBDStack.EfCore.BizActions.FluentValidation\HBDStack.EfCore.BizActions.FluentValidation.csproj" />
-    <ProjectReference Include="..\..\StatusGeneric\HBDStack.StatusGeneric\HBDStack.StatusGeneric.csproj" />
-    <ProjectReference Include="..\BizDbAccess\BizDbAccess.csproj" />
-    <ProjectReference Include="..\BizLogic\BizLogic.csproj" />
-    <ProjectReference Include="..\DataLayer\DataLayer.csproj" />
-    <ProjectReference Include="..\HBDStack.EfCore.BizActions\HBDStack.EfCore.BizActions.csproj" />
-    <ProjectReference Include="..\TestBizLayer\TestBizLayer.csproj" />
-  </ItemGroup>
+
 
   <ItemGroup>
     <Compile Remove="UnitTests\TestActions\**" />
@@ -51,6 +41,12 @@
 
   <ItemGroup>
     <None Remove="UnitTests\TestActions\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\HBDStack.EfCore.BizActions.DefaultValidation\HBDStack.EfCore.BizActions.DefaultValidation.csproj" />
+    <ProjectReference Include="..\HBDStack.EfCore.BizActions.FluentValidation\HBDStack.EfCore.BizActions.FluentValidation.csproj" />
+    <ProjectReference Include="..\HBDStack.EfCore.BizActions\HBDStack.EfCore.BizActions.csproj" />
   </ItemGroup>
 
 </Project>

@@ -8,7 +8,7 @@
         <PackageProjectUrl>https://github.com/HBDStack/HBDStack.EfCore.BizAction</PackageProjectUrl>
         <RepositoryUrl>https://github.com/HBDStack/HBDStack.EfCore.BizAction</RepositoryUrl>
         <PackageTags>Entity Framework Core, Business Logic, ServiceLayer</PackageTags>
-        <Product>HBD.EfCore.BizActions.Abstraction</Product>
+        <Product>HBDStack.EfCore.BizActions.Abstraction</Product>
         <Owners>Duy Hoang</Owners>
         <TargetFramework>net6.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
@@ -16,7 +16,7 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\StatusGeneric\HBDStack.StatusGeneric\HBDStack.StatusGeneric.csproj" />
+      <ProjectReference Include="..\HBDStack.StatusGeneric\HBDStack.StatusGeneric.csproj" />
     </ItemGroup>
-
+    
 </Project>

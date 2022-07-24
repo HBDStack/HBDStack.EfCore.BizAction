@@ -23,5 +23,6 @@
   <ItemGroup>
     <ProjectReference Include="..\HBDStack.StatusGeneric\HBDStack.StatusGeneric.csproj" />
   </ItemGroup>
+  
 
 </Project>

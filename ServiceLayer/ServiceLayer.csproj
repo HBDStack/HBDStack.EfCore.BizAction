@@ -18,12 +18,6 @@
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
   </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\..\StatusGeneric\HBDStack.StatusGeneric\HBDStack.StatusGeneric.csproj" />
-    <ProjectReference Include="..\BizDbAccess\BizDbAccess.csproj" />
-    <ProjectReference Include="..\BizLogic\BizLogic.csproj" />
-    <ProjectReference Include="..\DataLayer\DataLayer.csproj" />
-    <ProjectReference Include="..\GenericBizRunner\HBDStack.EfCore.BizActions.csproj" />
-  </ItemGroup>
+
 
 </Project>

@@ -21,7 +21,8 @@
   </ItemGroup>
     
   <ItemGroup>
-    <ProjectReference Include="..\..\HBDStack.EfCore.BizActions.Abstraction\HBDStack.EfCore.BizActions.Abstraction.csproj" />
-    <ProjectReference Include="..\..\StatusGeneric\HBDStack.StatusGeneric\HBDStack.StatusGeneric.csproj" />
+    <ProjectReference Include="..\HBDStack.EfCore.BizActions.Abstraction\HBDStack.EfCore.BizActions.Abstraction.csproj" />
   </ItemGroup>
+    
+  
 </Project>
