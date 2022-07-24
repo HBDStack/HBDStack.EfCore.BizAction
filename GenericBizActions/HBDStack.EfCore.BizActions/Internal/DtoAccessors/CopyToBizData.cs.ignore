@@ -1,0 +1,23 @@
+﻿// Copyright (c) 2018 Jon P Smith, GitHub: JonPSmith, web: http://www.thereformedprogrammer.net/
+// Licensed under MIT license. See License.txt in the project root for license information.
+
+using AutoMapper;
+using Microsoft.EntityFrameworkCore;
+
+namespace HBD.EfCore.BizAction.Internal.DtoAccessors
+{
+    internal class CopyToBizData<TBizIn, TDtoIn>
+        where TBizIn : class, new()
+        where TDtoIn : GenericActionToBizDto<TBizIn, TDtoIn>, new()
+    {
+        public TBizIn CopyToBiz(DbContext db, IMapper mapper, object source)
+        {
+            return ((TDtoIn) source).CopyToBizData(db, mapper, (TDtoIn) source);
+        }
+
+        //public void SetupSecondaryData(DbContext db, IBizActionStatus status, object dto)
+        //{
+        //    ((TDtoIn) dto).SetupSecondaryData(db, status);
+        //}
+    }
+}

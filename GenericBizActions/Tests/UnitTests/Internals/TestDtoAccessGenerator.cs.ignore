@@ -1,0 +1,162 @@
+﻿// Copyright (c) 2018 Jon P Smith, GitHub: JonPSmith, web: http://www.thereformedprogrammer.net/
+// Licensed under MIT license. See License.txt in the project root for license information.
+
+using HBD.EfCore.BizAction.Configuration;
+using HBD.EfCore.BizAction.Internal;
+using TestBizLayer.BizDTOs;
+using Tests.DTOs;
+using Tests.Helpers;
+using Xunit;
+using Xunit.Extensions.AssertExtensions;
+
+namespace Tests.UnitTests.Internals
+{
+    public class TestDtoAccessGenerator
+    {
+
+        [Fact]
+        public void Test01DirectCopyOk()
+        {
+            //SETUP 
+            var copier = DtoAccessGenerator.BuildCopier(typeof(BizDataIn), typeof(BizDataIn), true, false, true);
+            var input = new BizDataIn { Num = 234 };
+
+            //ATTEMPT
+            var data = copier.DoCopyToBiz<BizDataIn>(null, null, input);        
+
+            //VERIFY    
+            data.Num.ShouldEqual(234);
+        }
+
+        [Fact]
+        public void TestBizInCopyOk()
+        {
+            //SETUP
+            var utData = NonDiBizSetup.SetupDtoMapping<ServiceLayerBizInDto>();
+            var copier = DtoAccessGenerator.BuildCopier(typeof(ServiceLayerBizInDto), typeof(BizDataIn), true, false, true);
+            var input = new ServiceLayerBizInDto { Num = 234 };
+
+            //ATTEMPT
+            var data = copier.DoCopyToBiz<BizDataIn>(null, utData.WrappedConfig.ToBizIMapper, input);
+
+            //VERIFY    
+            data.Num.ShouldEqual(234);
+            input.CopyToBizDataCalled.ShouldBeTrue();
+            //input.SetupSecondaryDataCalled.ShouldBeFalse();
+        }
+
+        [Fact]
+        public void TestBizOutCopyOk()
+        {
+            //SETUP
+            var utData = NonDiBizSetup.SetupDtoMapping<ServiceLayerBizOutDto>();
+            var copier = DtoAccessGenerator.BuildCopier(typeof(BizDataOut), typeof(ServiceLayerBizOutDto), false, false, true);
+            var input = new BizDataOut { Output = "test copy" };
+
+            //ATTEMPT
+            var data = copier.DoCopyFromBiz<ServiceLayerBizOutDto>(null, utData.WrappedConfig.FromBizIMapper, input);
+
+            //VERIFY    
+            data.Output.ShouldEqual("test copy");
+            data.CopyFromBizDataCalled.ShouldBeTrue();
+            //data.SetupSecondaryOutputDataCalled.ShouldBeTrue();
+        }
+
+        //-----------------------
+        //BizOut
+
+        [Fact]
+        public void TestBizOutDirectOk()
+        {
+            //SETUP 
+            var copier = DtoAccessGenerator.BuildCopier(typeof(BizDataOut), typeof(BizDataOut), false, false, true);
+            var input = new BizDataOut { Output = "test copy"};
+
+            //ATTEMPT
+            var data = copier.DoCopyFromBiz<BizDataOut>(null, null, input);
+
+            //VERIFY    
+            data.Output.ShouldEqual("test copy");
+        }
+
+        //-------------------------------------------------------------
+        //CreateDataWithPossibleSetup
+
+        [Fact]
+        public void TestCreateDataWithPossibleSetupDirectOk()
+        {
+            //SETUP 
+            var copier = DtoAccessGenerator.BuildCopier(typeof(BizDataIn), typeof(BizDataIn), true, false, true);
+            var status = new TestBizActionStatus();
+            
+            //ATTEMPT
+            var data = copier.CreateDataWithPossibleSetup<BizDataIn>(null, status, null);
+
+            //VERIFY    
+            //Should not fail
+        }
+
+        [Fact]
+        public void TestCreateDataWithPossibleSetupDtoOk()
+        {
+            //SETUP 
+            var copier = DtoAccessGenerator.BuildCopier(typeof(ServiceLayerBizInDto), typeof(BizDataIn), true, false, true);
+            var status = new TestBizActionStatus();
+
+            //ATTEMPT
+            var data = copier.CreateDataWithPossibleSetup<ServiceLayerBizInDto>(null, status, null);
+
+            //VERIFY    
+            //data.SetupSecondaryDataCalled.ShouldBeTrue();
+            data.Num.ShouldEqual(0);
+        }
+
+        [Fact]
+        public void TestCreateDataWithPossibleSetupDtoWithActionOk()
+        {
+            //SETUP 
+            var copier = DtoAccessGenerator.BuildCopier(typeof(ServiceLayerBizInDto), typeof(BizDataIn), true, false, true);
+            var status = new TestBizActionStatus();
+
+            //ATTEMPT
+            var data = copier.CreateDataWithPossibleSetup<ServiceLayerBizInDto>(null, status, x => { x.Num = 2;});
+
+            //VERIFY    
+            //data.SetupSecondaryDataCalled.ShouldBeTrue();
+            data.Num.ShouldEqual(2);
+        }
+
+        //-------------------------------------------------------------------
+        //SetupSecondaryDataIfRequired
+
+        //[Fact]
+        //public void TestSetupSecondaryDataDirectOk()
+        //{
+        //    //SETUP 
+        //    var copier = DtoAccessGenerator.BuildCopier(typeof(BizDataIn), typeof(BizDataIn), true, false, true);
+        //    var input = new BizDataIn { Num = 234 };
+        //    var status = new TestBizActionStatus();
+
+        //    //ATTEMPT
+        //    copier.SetupSecondaryDataIfRequired(null, status, input);
+
+        //    //VERIFY    
+        //    //Should not do anything, but musn't fail
+        //}
+
+        //[Fact]
+        //public void TestSetupSecondaryDataDtoOk()
+        //{
+        //    //SETUP 
+        //    var copier = DtoAccessGenerator.BuildCopier(typeof(ServiceLayerBizInDto), typeof(BizDataIn), true, false, true);
+        //    var input = new ServiceLayerBizInDto { Num = 234 };
+        //    var status = new TestBizActionStatus();
+
+        //    //ATTEMPT
+        //    copier.SetupSecondaryDataIfRequired(null, status, input);
+
+        //    //VERIFY    
+        //    input.SetupSecondaryDataCalled.ShouldBeTrue();
+        //}
+    }
+}

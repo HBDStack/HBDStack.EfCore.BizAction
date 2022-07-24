@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <PackageId>HBDStack.EfCore.BizActions.Abstraction</PackageId>
+        <Authors>Duy Hoang</Authors>
+        <Description>Library to run business logic when using Entity Framework Core for database accesses, support status error code</Description>
+        <Copyright>Copyright (c) 2025 Drunkcoding</Copyright>
+        <PackageProjectUrl>https://github.com/HBDStack/HBDStack.EfCore.BizAction</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/HBDStack/HBDStack.EfCore.BizAction</RepositoryUrl>
+        <PackageTags>Entity Framework Core, Business Logic, ServiceLayer</PackageTags>
+        <Product>HBD.EfCore.BizActions.Abstraction</Product>
+        <Owners>Duy Hoang</Owners>
+        <TargetFramework>net6.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\StatusGeneric\HBDStack.StatusGeneric\HBDStack.StatusGeneric.csproj" />
+    </ItemGroup>
+
+</Project>

@@ -1,0 +1,29 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+     <TargetFramework>net6.0</TargetFramework>
+     <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="OrderServices\Concrete\PlaceOrderService.cs" />
+    <Compile Remove="OrderServices\Concrete\PlaceOrderServiceTransact.cs" />
+    <Compile Remove="OrderServices\Concrete\PlaceOrderServiceWithVal.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Http" Version="2.2.2" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.2.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="6.0.5" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\StatusGeneric\HBDStack.StatusGeneric\HBDStack.StatusGeneric.csproj" />
+    <ProjectReference Include="..\BizDbAccess\BizDbAccess.csproj" />
+    <ProjectReference Include="..\BizLogic\BizLogic.csproj" />
+    <ProjectReference Include="..\DataLayer\DataLayer.csproj" />
+    <ProjectReference Include="..\GenericBizRunner\HBDStack.EfCore.BizActions.csproj" />
+  </ItemGroup>
+
+</Project>
