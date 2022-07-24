@@ -4,19 +4,24 @@
         <PackageId>HBDStack.EfCore.BizActions.Abstraction</PackageId>
         <Authors>Duy Hoang</Authors>
         <Description>Library to run business logic when using Entity Framework Core for database accesses, support status error code</Description>
-        <Copyright>Copyright (c) 2025 Drunkcoding</Copyright>
-        <PackageProjectUrl>https://github.com/HBDStack/HBDStack.EfCore.BizAction</PackageProjectUrl>
-        <RepositoryUrl>https://github.com/HBDStack/HBDStack.EfCore.BizAction</RepositoryUrl>
+        <Copyright>Copyright (c) 2021 Drunkcoding</Copyright>
+        <PackageProjectUrl>https://github.com/baoduy/HBD.EfCore.BizAction</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/baoduy/HBD.EfCore.BizAction</RepositoryUrl>
         <PackageTags>Entity Framework Core, Business Logic, ServiceLayer</PackageTags>
+        <PackageIconUrl></PackageIconUrl>
         <Product>HBDStack.EfCore.BizActions.Abstraction</Product>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <PackageVersion>5.0.0-Preview03</PackageVersion>
+        <Version>5.0.0-Preview03</Version>
         <Owners>Duy Hoang</Owners>
+        <Title></Title>
         <TargetFramework>net6.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
     </PropertyGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\HBDStack.StatusGeneric\HBDStack.StatusGeneric.csproj" />
+      <ProjectReference Include="..\StatusGeneric\HBDStack.StatusGeneric\HBDStack.StatusGeneric.csproj" />
     </ItemGroup>
-    
+
 </Project>

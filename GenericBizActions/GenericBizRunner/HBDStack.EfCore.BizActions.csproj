@@ -1,0 +1,42 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <RootNamespace>HBDStack.EfCore.BizAction</RootNamespace>
+    <AssemblyName>HBDStack.EfCore.BizAction</AssemblyName>
+    <TargetFramework>net6.0</TargetFramework>
+    <LangVersion>default</LangVersion>
+  </PropertyGroup>
+    
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="11.0.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.7" />
+  </ItemGroup>
+    
+  <ItemGroup>
+    <ProjectReference Include="..\..\HBDStack.EfCore.BizActions.Abstraction\HBDStack.EfCore.BizActions.Abstraction.csproj" />
+    <ProjectReference Include="..\..\StatusGeneric\HBDStack.StatusGeneric\HBDStack.StatusGeneric.csproj" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <PackageId>HBDStack.EfCore.BizActions</PackageId>
+    <Authors>Duy Hoang</Authors>
+    <Description>Library to run business logic when using Entity Framework Core for database accesses, support status error code</Description>
+    <Copyright>Copyright (c) 2021 Drunkcoding</Copyright>
+    <PackageProjectUrl>https://github.com/baoduy/HBD.EfCore.BizAction</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/baoduy/HBD.EfCore.BizAction</RepositoryUrl>
+    <PackageTags>Entity Framework Core, Business Logic, ServiceLayer</PackageTags>
+    <PackageIconUrl></PackageIconUrl>
+    <Product>HBDStack.EfCore.BizActions</Product>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <Owners>Duy Hoang</Owners>
+    <Title></Title>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>disable</Nullable>
+  </PropertyGroup>
+  
+
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|netstandard2.1|AnyCPU'">
+    <DocumentationFile>bin\Release\netcoreapp2.1\GenericBizRunner.xml</DocumentationFile>
+  </PropertyGroup>
+</Project>

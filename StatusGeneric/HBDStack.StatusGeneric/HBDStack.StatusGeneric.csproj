@@ -1,0 +1,39 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.ComponentModel.Annotations" Version="5.0.0" />
+    <PackageReference Include="System.Text.Json" Version="6.0.5" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <PackageVersion>1.1.0</PackageVersion>
+    <Version>1.1.0</Version>
+    <AssemblyVersion></AssemblyVersion>
+    <FileVersion></FileVersion>
+    <PackageId>HBDStack.StatusGeneric</PackageId>
+    <Authors>Duy Hoang</Authors>
+    <Company>Selective Analytics</Company>
+    <Product>HBDStack.StatusGeneric</Product>
+    <Description>A support library to provide a common status handling for my projects.</Description>
+    <Copyright>Copyright (c) 2022 drunkcoding</Copyright>
+    <PackageLicenseUrl>MIT</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/baoduy/HBD.EfCore.BizAction</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/baoduy/HBD.EfCore.BizAction</RepositoryUrl>
+    <RepositoryType>GitHub</RepositoryType>
+    <PackageTags>EfCore.GenericServices</PackageTags>
+    <PackageReleaseNotes>
+      - Updated to provide needed features for GenericBizRunner
+      - Added some interfaces and made Message read/write
+    </PackageReleaseNotes>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DocumentationFile>bin\Release\netstandard2.0\StatusGeneric.xml</DocumentationFile>
+  </PropertyGroup>
+
+</Project>

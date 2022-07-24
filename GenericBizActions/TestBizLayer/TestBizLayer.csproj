@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+ <PropertyGroup>
+     <TargetFramework>net6.0</TargetFramework>
+     <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\GenericBizRunner\HBDStack.EfCore.BizActions.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="11.0.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.7" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="6.0.7" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Actions\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Remove="Actions\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Actions\**" />
+  </ItemGroup>
+
+</Project>

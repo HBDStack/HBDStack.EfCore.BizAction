@@ -5,7 +5,7 @@ on:
     branches: [main, master]
 
 env:
-  Project_Path: 'HBDStack.EfCore.BizActions.sln'
+  Project_Path: 'HBDStack.BizActions.sln'
   Enable_Release: true
   Enable_Nuget_Release: true
 
