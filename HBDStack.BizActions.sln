@@ -42,6 +42,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HBDStack.EfCore.BizActions.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HBDStack.EfCore.BizActions.FluentValidation", "HBDStack.EfCore.BizActions.FluentValidation\HBDStack.EfCore.BizActions.FluentValidation.csproj", "{B85ED66E-0847-4AE9-8EE3-22D2D15E7B59}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HBDStack.EfCore.BizActions.FluentValidation", "HBDStack.EfCore.BizActions.FluentValidation\HBDStack.EfCore.BizActions.FluentValidation.csproj", "{ED558FD7-19E0-4F0F-9657-4BAD9E5B0C84}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FluentValidation", "FluentValidation", "{E25779D9-EF50-4E51-8D3D-557EAAF213CC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -96,6 +100,10 @@ Global
 		{B85ED66E-0847-4AE9-8EE3-22D2D15E7B59}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B85ED66E-0847-4AE9-8EE3-22D2D15E7B59}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B85ED66E-0847-4AE9-8EE3-22D2D15E7B59}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ED558FD7-19E0-4F0F-9657-4BAD9E5B0C84}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED558FD7-19E0-4F0F-9657-4BAD9E5B0C84}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED558FD7-19E0-4F0F-9657-4BAD9E5B0C84}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED558FD7-19E0-4F0F-9657-4BAD9E5B0C84}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -116,5 +124,6 @@ Global
 		{60762577-58EA-4E4A-93BB-30A05C9B4D89} = {13B94D20-C608-41C4-A5A0-FB485D45D747}
 		{72DC6062-2AEE-4529-9857-6270F2627D5D} = {13B94D20-C608-41C4-A5A0-FB485D45D747}
 		{B85ED66E-0847-4AE9-8EE3-22D2D15E7B59} = {13B94D20-C608-41C4-A5A0-FB485D45D747}
+		{ED558FD7-19E0-4F0F-9657-4BAD9E5B0C84} = {E25779D9-EF50-4E51-8D3D-557EAAF213CC}
 	EndGlobalSection
 EndGlobal
